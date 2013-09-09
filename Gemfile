@@ -49,8 +49,9 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
+  gem 'rspec'
+  gem 'rspec-rails'
 end
