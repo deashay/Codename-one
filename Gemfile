@@ -30,27 +30,27 @@ group :assets do
 end
 
 group :development do
-	gem 'awesome_print'
-	gem 'better_errors'
-	gem 'binding_of_caller'
-	gem 'letter_opener'
-	gem 'quiet_assets'
-	gem 'sextant'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'letter_opener'
+  gem 'quiet_assets'
+  gem 'sextant'
 end
 
 group :development, :test do
-	gem 'guard'
-	gem 'guard-rspec'
-	gem 'guard-shell'
-	gem 'pry', github: 'pry/pry'
-	gem 'pry-rails'
-	gem 'parallel_tests'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-shell'
+  gem 'pry', github: 'pry/pry'
+  gem 'pry-rails'
+  gem 'parallel_tests'
 end
 
 group :test do
-	gem 'factory_girl_rails'
-	gem 'rspec'
-	gem 'rspec-rails'
-	gem 'database_cleaner'
-	gem 'mongoid-rspec'
+  gem 'factory_girl_rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'mongoid-rspec'
 end
