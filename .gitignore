@@ -1,0 +1,9 @@
+/.bundle
+.rspec
+public/uploads/
+public/assets/
+.env
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
