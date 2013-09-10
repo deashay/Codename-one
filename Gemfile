@@ -54,4 +54,5 @@ group :test do
   gem 'mongoid-rspec'
   gem 'rspec'
   gem 'rspec-rails'
-end
+  gem 'simplecov'
+  end
