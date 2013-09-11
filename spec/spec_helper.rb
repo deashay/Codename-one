@@ -28,6 +28,9 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  # simplify calling FactoryGirl methods (no need Class name)
+  config.include FactoryGirl::Syntax::Methods
+
   require 'database_cleaner'
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
