@@ -49,6 +49,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
