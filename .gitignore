@@ -7,3 +7,11 @@ public/assets/
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore editors temp files
+# vim backup files:
+*.swp
+*.*~
+
+# Ignore coverage reports.
+coverage/
