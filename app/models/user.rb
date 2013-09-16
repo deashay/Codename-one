@@ -38,4 +38,5 @@ class User
   # field :authentication_token, :type => String
 
   has_one :country, inverse_of: :owner
+  has_many :races
 end
