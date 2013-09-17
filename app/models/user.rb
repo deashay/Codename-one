@@ -37,6 +37,7 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
 
+  belongs_to :world
   has_one :country, inverse_of: :owner
   has_many :races
 end
