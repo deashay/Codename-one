@@ -1,0 +1,7 @@
+= simple_form_for(race) do |f|
+  .errors
+    = f.error_notification
+  .name
+    = f.input :name
+  .buttons
+    = f.submit 'Create', disable_with: 'Creating'
