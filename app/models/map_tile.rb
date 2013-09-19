@@ -7,6 +7,4 @@ class MapTile
   has_many :armies
   has_many :cities
   has_many :buildings
-
-
 end

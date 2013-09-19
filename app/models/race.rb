@@ -8,4 +8,6 @@ class Race < Attributable
   has_many :nobles
 
   field :name, type: String
+
+  validates :name, presence: true
 end
