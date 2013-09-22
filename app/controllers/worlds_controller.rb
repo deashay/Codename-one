@@ -2,9 +2,8 @@ class WorldsController < ApplicationController
   expose(:world, attributes: :permitted_params)
 
   def create
-    world.generate_map
-
     if world.save
+      world.generate_map
       redirect_to root_path, notice: 'Created new world'
     else
       render :new
