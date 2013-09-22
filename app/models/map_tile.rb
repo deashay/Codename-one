@@ -1,6 +1,7 @@
 class MapTile
   include Mongoid::Document
 
+  belongs_to :world
   belongs_to :influencing_city, class_name: 'City'
   belongs_to :country, inverse_of: :lands
   
