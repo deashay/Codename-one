@@ -10,4 +10,12 @@ FactoryGirl.define do
     width 4
     height 4
   end
+
+  factory(:race) do
+    name 'orks'
+
+    factory(:invalid_race) do
+      name ''
+    end
+  end
 end

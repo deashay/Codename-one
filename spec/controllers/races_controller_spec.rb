@@ -3,20 +3,32 @@ require 'spec_helper'
 
 describe RacesController do
 
-  describe 'CREATE' do
+  describe 'POST #create' do
     let(:user) { create(:user) }
-    let(:race_params) { { race: { name: 'somename' }} }
 
     before do
       controller.stub(:current_user).and_return(user)
     end
 
-    it 'Adds new race to current user' do
-      expect{ post :create, race_params }.to change{ user.races.count }.by(1)
+    context 'with valid data' do
+      it 'adds new race to current user' do
+        expect{ post :create, race: attributes_for(:race) }.to change{ user.races.count }.by(1)
+      end
+
+      it 'creates a new race' do
+        expect{ post :create, race: attributes_for(:race) }.to change{ Race.count }.by(1)
+      end
     end
 
-    it 'Creates a new race' do
-      expect{ post :create, race_params }.to change{ Race.count }.by(1)
+    context 'with invalid data' do
+      it 'does not save new race' do
+        expect{ post :create, race: attributes_for(:invalid_race) }.to_not change{ Race.count }
+      end
+
+      it 'render #new template' do
+        post :create, race: attributes_for(:invalid_race)
+        response.should render_template :new
+      end
     end
   end
 end
