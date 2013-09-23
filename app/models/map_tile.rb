@@ -8,4 +8,6 @@ class MapTile
   has_many :armies
   has_many :cities
   has_many :buildings
+
+  validates :world, presence: true
 end

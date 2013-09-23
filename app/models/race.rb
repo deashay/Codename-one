@@ -8,6 +8,9 @@ class Race < Attributable
   has_many :nobles
 
   field :name, type: String
+  field :active, type: Boolean, default: false
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
+
+  scope :active, ->{ where(active: true) }
 end

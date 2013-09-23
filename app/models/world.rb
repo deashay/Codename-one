@@ -9,7 +9,7 @@ class World
   field :width, type: Integer
   field :height, type: Integer
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates_numericality_of :width, greater_than: 0
   validates_numericality_of :height, greater_than: 0
 

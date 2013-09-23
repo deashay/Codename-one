@@ -7,4 +7,8 @@ class Country
   has_many :lands, class_name: 'MapTile'
   has_many :nobles
   has_one :king, class_name: 'Noble'
+
+  field :name, type: String
+
+  validates :name, presence: true, uniqueness: true
 end
