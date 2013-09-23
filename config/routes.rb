@@ -7,7 +7,11 @@ CodenameOne::Application.routes.draw do
 
   resources :users
 
-  resources :races
+  resources :races do
+    member do
+      put :activate
+    end
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
