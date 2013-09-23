@@ -13,5 +13,9 @@ FactoryGirl.define do
 
   factory(:race) do
     sequence(:name) { |i| "new race#{i}" }
+
+    factory(:invalid_race) do
+      name ''
+    end
   end
 end
