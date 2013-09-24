@@ -1,5 +1,13 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_group 'Models', 'app/models'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Decorators', 'app/decorators'
+  add_group 'Active Admin', 'app/admin'
+  add_group 'Long files' do |src_file|
+    src_file.lines.count > 100
+  end
+end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
