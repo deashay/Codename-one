@@ -46,12 +46,12 @@ describe RacesController do
       end
 
       it 'doesn\'t activate race' do
-        expect{ put :activate, { id: race.id } }.not_to change{ race.active }
+        expect{ put :activate, id: race.id }.not_to change{ race.active }
       end
     end
 
     context 'when owner didn\'t join world' do
-      let(:races) { [create(:race, user: user),create(:race, user: user)] }
+      let(:races) { [create(:race, user: user), create(:race, user: user)] }
 
       it 'activates given race' do
         put :activate, { id: race.id } 
