@@ -14,6 +14,6 @@ class World
   validates_numericality_of :height, greater_than: 0
 
   def generate_map
-    (width*height).times{ self.map_tiles.create }
+    (width * height).times{ self.map_tiles.create }
   end
 end

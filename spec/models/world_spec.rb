@@ -10,9 +10,9 @@ describe World do
   end
 
   describe 'fields' do
-    it { should have_field(:name) }
-    it { should have_field(:width) }
-    it { should have_field(:height) }
+    it { should have_field(:name).of_type(String) }
+    it { should have_field(:width).of_type(Integer) }
+    it { should have_field(:height).of_type(Integer) }
   end
 
   describe 'validations' do

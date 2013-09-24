@@ -10,7 +10,7 @@ describe Regiment do
   end
 
   describe 'fields' do
-    it { should have_field(:name) }
+    it { should have_field(:name).of_type(String) }
   end
 
   describe 'validations' do
