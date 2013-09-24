@@ -10,13 +10,13 @@ describe UserDecorator do
     context 'with existing world' do
       it 'returns user\'s world' do
         user.world = world
-        subject.world.should eq(world)
+        expect(subject.world).to eq(world)
       end
     end
 
     context 'without existing world' do
       it 'prints error message' do
-        subject.world.should eq('You are not connected to any world')
+        expect(subject.world).to eq('You are not connected to any world')
       end
     end
   end
