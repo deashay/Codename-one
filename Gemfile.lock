@@ -295,6 +295,7 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
       railties (~> 3.0)
+    terminal-notifier-guard (1.5.3)
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
@@ -360,5 +361,6 @@ DEPENDENCIES
   simplecov
   sprockets
   strong_parameters
+  terminal-notifier-guard
   uglifier (>= 1.0.3)
   whenever
