@@ -10,8 +10,8 @@ describe Group do
   end
 
   describe 'fields' do
-    it { should have_field(:gender) }
-    it { should have_field(:count) }
-    it { should have_field(:used) }
+    it { should have_field(:gender).of_type(Boolean) }
+    it { should have_field(:count).of_type(Integer) }
+    it { should have_field(:used).of_type(Integer) }
   end
 end

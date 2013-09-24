@@ -12,8 +12,8 @@ describe Race do
   end
 
   describe 'fields' do
-    it { should have_field(:name) }
-    it { should have_field(:active) }
+    it { should have_field(:name).of_type(String) }
+    it { should have_field(:active).of_type(Boolean) }
   end
 
   describe 'validations' do
