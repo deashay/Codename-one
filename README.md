@@ -8,7 +8,8 @@ Create admin user, in rails console:
 - Use new syntax whenever you are able to.
 - Don't leave commented out code.
 - Remember about tests! (describe cases using 3rd person - not 'should'!)
-- Single quotes > double quotes
-- Always put new line at the end of file
+- Single quotes > double quotes.
+- Always put new line at the end of file.
 - No trailing spaces!
-- Use draper and decent_exposure
+- Use draper and decent_exposure.
+- Rails helpers are banned.

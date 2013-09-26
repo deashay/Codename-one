@@ -7,6 +7,7 @@ SimpleCov.start do
   add_group 'Long files' do |src_file|
     src_file.lines.count > 100
   end
+  add_filter 'app/admin'
 end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
