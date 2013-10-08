@@ -18,4 +18,8 @@ FactoryGirl.define do
       name ''
     end
   end
+
+  factory(:global_configuration) do
+    starting_units 50
+  end
 end
