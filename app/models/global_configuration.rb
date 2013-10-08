@@ -1,7 +1,7 @@
 class GlobalConfiguration
   include Mongoid::Document
 
-  has_many :starting_resources, class_name: 'Resource'
+  has_many :starting_resources, class_name: 'Resource', dependent: :destroy
   has_many :worlds
 
   field :starting_units, type: Integer, default: 50
