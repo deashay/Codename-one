@@ -1,17 +1,33 @@
-ActiveAdmin.register World do     
-  index do                            
-    column :name    
+ActiveAdmin.register World do
+  index do
+    column :name
     column :width
-    column :height      
-    default_actions                   
-  end                                                  
+    column :height
+    column :starting_units do |world|
+      world.config.try(:starting_units)
+    end
+    column :global_configuration do |world|
+      link_to world.config,
+        admin_global_configuration_path(world.config.id) unless world.config.nil?
+    end
+    default_actions
+  end
 
-  form do |f|                         
-    f.inputs "World Details" do       
-      f.input :name  
+  show do |world|
+    attributes_table do
+      row :name
+      row :width
+      row :height
+    end
+  end
+
+  form do |f|
+    f.inputs "World Details" do
+      f.input :name
       f.input :width, as: :number
-      f.input :height, as: :number               
-    end                               
-    f.actions                         
-  end                                 
-end                                   
+      f.input :height, as: :number
+      f.input :global_configuration, collection: GlobalConfiguration.all
+    end
+    f.actions
+  end
+end
