@@ -4,6 +4,7 @@ class World
   has_many :users
   has_many :map_tiles
   has_many :countries
+  belongs_to :global_configuration
 
   field :name, type: String
   field :width, type: Integer
@@ -15,5 +16,9 @@ class World
 
   def generate_map
     (width * height).times{ self.map_tiles.create }
+  end
+
+  def config
+    @config ||= global_configuration || GlobalConfiguration.global.first
   end
 end
