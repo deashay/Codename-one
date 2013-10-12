@@ -3,7 +3,7 @@
   = user.email
 .world
   Current World:
-  = user.world
+  = user.world.name
 .races_container
   Owned races:
   - user.races.each do |race|
@@ -11,5 +11,5 @@
       .name
         = race.name
 .create_race
-  Create new 
+  Create new
   = link_to "race", new_race_path()
