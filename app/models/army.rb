@@ -6,6 +6,7 @@ class Army
   has_one :general, class_name: 'Noble'
 
   has_many :regiments
+  has_many :resources, as: :acquired_resources
 
   field :name, type: String
 

@@ -5,6 +5,7 @@ class Resource
   belongs_to :world, inverse_of: :starting_resources
   belongs_to :kind, class_name: 'Kinds::Resource', inverse_of: nil
   belongs_to :required_in_resource, class_name: 'Kinds::Resource', inverse_of: :necessary_resources
+  belongs_to :army
 
   field :amount, type: Integer, default: 0
 
