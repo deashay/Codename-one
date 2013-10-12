@@ -9,8 +9,10 @@ class Race < Attributable
 
   field :name, type: String
   field :active, type: Boolean, default: false
+  field :strength, type: Float, default: 50.0
 
   validates :name, presence: true, uniqueness: true
+  validates :strength, numericality: true, inclusion: (0..100)
 
   scope :active, ->{ where(active: true) }
 end
