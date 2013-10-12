@@ -7,6 +7,8 @@ CodenameOne::Application.routes.draw do
 
   resources :users
 
+  resource :world
+
   resources :races do
     member do
       put :activate

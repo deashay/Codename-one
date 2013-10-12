@@ -10,6 +10,10 @@ class WorldsController < ApplicationController
     end
   end
 
+  def show
+    render json: current_user.world.map_tiles
+  end
+
   protected
 
   def permitted_params
