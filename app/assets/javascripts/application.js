@@ -17,4 +17,3 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/codename_one
-//= require_tree .
