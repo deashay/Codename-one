@@ -12,4 +12,6 @@ window.CodenameOne =
   Views: {}
 
 $(document).ready ->
-
+  if ($map = $('#map')).length
+    world = new CodenameOne.Views.World(el: $map)
+    world.render()
