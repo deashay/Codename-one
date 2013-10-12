@@ -19,6 +19,8 @@ class Army
   validates :can_lift, numericality: { greater_than_or_equal_to: 0 }
   validates :race, presence: true
 
+  private
+
   def recalculate_can_lift
     weigth_for_army = self.regiments.groups.pluck(:count).inject(0, :+)
     self.update_attributes(:can_lift, weigth_for_army * self.race.strength)
