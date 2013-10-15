@@ -25,9 +25,9 @@ class Army
   # keep in mind that race stats will affect group.
   def recalculate_max_weigth_of_resources
     weigth_attribute_id = world.config(:weigth_attribute_id).weigth_attribute_id
-    max_weigth_for_army = regiments.groups.map { |group|
+    max_weigth_for_army = regiments.groups.map do |group|
       group.count * group.stats.of_kind(weigth_attribute_id).first.value
-    }.sum
+    end.sum
     self.update_attributes(:can_lift, weigth_for_army)
   end
 end
