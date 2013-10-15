@@ -2,6 +2,7 @@ class Country
   include Mongoid::Document
 
   belongs_to :owner, class_name: 'User'
+  belongs_to :world
   has_many :armies
   has_many :cities
   has_many :lands, class_name: 'MapTile'

@@ -18,7 +18,11 @@ class World
     (width * height).times{ self.map_tiles.create }
   end
 
-  def config
-    @config ||= global_configuration || GlobalConfiguration.global.first
+  def config fields = nil
+    if fields
+      global_configuration.only(fields) || GlobalConfiguration.global.only(fields).first
+    else
+      global_configuration || GlobalConfiguration.global.first
+    end
   end
 end
