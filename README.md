@@ -2,7 +2,16 @@ Codename-one
 ============
 
 Create admin user, in rails console:
-  AdminUser.create email: 'admin@example.com', password: 'password', password_confirmation: 'password'
+  > AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+
+### Global rules:
+- Write tests for every method
+- Aim for 100% test coverage
+
+### Pivotal Tracker:
+- Don't accept stories you've delivered
+- Before accepting any story talk about it with other collaborators
+- Never accept story which doesn't contain specs
 
 ### Code rules:
 - Use new syntax whenever you are able to.
