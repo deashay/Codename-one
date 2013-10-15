@@ -2,7 +2,7 @@ class Group
   include Mongoid::Document
 
   belongs_to :owner, polymorphic: true
-  has_one :race
+  belongs_to :race
   has_one :nationality
 
   field :gender, type: Boolean

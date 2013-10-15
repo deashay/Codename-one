@@ -16,4 +16,6 @@ class Race < Attributable
   validates :strength, numericality: true, inclusion: (0..100)
 
   scope :active, ->{ where(active: true) }
+
+  delegate :strength, to: :group
 end
