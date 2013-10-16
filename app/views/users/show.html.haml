@@ -1,9 +1,10 @@
 .email
   Email
   = user.email
-.world
-  Current World:
-  = user.world.name
+- if user.connected_to_any_world?
+  .world
+    Current World:
+    = user.world.name
 .races_container
   Owned races:
   - user.races.each do |race|
