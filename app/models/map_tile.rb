@@ -14,5 +14,7 @@ class MapTile
   has_one :kind, class_name: 'Kinds::MapTile', inverse_of: nil
 
   validates :world, presence: true
-  validates :kind, presence: true
+
+  delegate :name, to: :kind
+  delegate :texture_path, to: :kind
 end
