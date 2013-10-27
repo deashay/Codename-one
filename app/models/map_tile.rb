@@ -11,6 +11,8 @@ class MapTile
   has_many :armies
   has_many :cities
   has_many :buildings
+  has_one :kind, class_name: 'Kinds::MapTile', inverse_of: nil
 
   validates :world, presence: true
+  validates :kind, presence: true
 end
