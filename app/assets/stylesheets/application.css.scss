@@ -1,0 +1,10 @@
+ @import 'twitter/bootstrap';
+ @import 'active_admin';
+ @import 'blog';
+ @import 'header';
+
+ // Stuff below just for better view, will be remove later.
+ .login {
+  background: lightgray;
+  min-height: 300px;
+ }

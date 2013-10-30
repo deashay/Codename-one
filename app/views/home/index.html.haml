@@ -1,5 +1,14 @@
-- if current_user
-  .center
-    Go to your:
-    = link_to 'profile', user_path(current_user)
-  #map
+#blog.col-md-9
+  %h1 Blog news here
+.login.col-md-3.pull-right
+  - if current_user
+    You're signed in as
+    = current_user.email
+    \. Tired of this bullshit?
+    = link_to 'Sign out', destroy_user_session_path, method: :delete
+  - else
+    = link_to 'Sign up ', new_user_registration_path
+    or
+    = link_to 'Sign in', new_user_session_path
+  %br
+  Dynamic JS login here.
