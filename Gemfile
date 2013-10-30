@@ -27,6 +27,7 @@ group :assets do
   gem 'haml_coffee_assets'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', require: 'bootstrap-rails'
 end
 
 group :development do
